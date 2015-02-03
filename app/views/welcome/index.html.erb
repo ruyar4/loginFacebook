@@ -1,0 +1,6 @@
+<% if user_signed_in? %>
+	<img src="<%= current_user.photo %>" >
+	<li><%= link_to("Salir", destroy_user_session_path, method: :delete) %></li>
+<% else  %>
+	<li> <%= link_to("Ingresar", new_user_session_path)%></li>
+<% end  %>
